@@ -40,16 +40,16 @@ public class Prices {
 	private LocalDateTime startDate;
 	@Column(name = "END_DATE")
 	private LocalDateTime endDate;
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "FK_BRAND_ID", nullable = false)
 	private Brands fkBrandId;
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "FK_PRODUCT_ID", nullable = false)
 	private Products fkProductId;
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "FK_CURRENCY_ID", nullable = false)
 	private Currencies fkCurrencyId;
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "FK_RATE_ID", nullable = false)
 	private Rates fkRatesId;
 

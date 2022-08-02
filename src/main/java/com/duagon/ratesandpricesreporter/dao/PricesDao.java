@@ -1,5 +1,6 @@
 package com.duagon.ratesandpricesreporter.dao;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +31,12 @@ public class PricesDao {
 		}
 
 		return optPrices;
+	}
+	
+	public Optional<List<Prices>> findAllPrices() {
+		
+		return Optional.ofNullable((List<Prices>) iPricesDao.findAll());
+		
 	}
 
 }
