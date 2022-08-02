@@ -48,7 +48,7 @@ public class Prices {
 	private Products fkProductId;
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "FK_CURRENCY_ID", nullable = false)
-	private Currency fkCurrencyId;
+	private Currencies fkCurrencyId;
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "FK_RATE_ID", nullable = false)
 	private Rates fkRatesId;

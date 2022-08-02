@@ -21,7 +21,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class Currency {
+public class Currencies {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
