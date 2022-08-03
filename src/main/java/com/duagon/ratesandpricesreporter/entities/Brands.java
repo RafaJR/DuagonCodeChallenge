@@ -28,6 +28,9 @@ public class Brands {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	@Column(name = "ID_BRAND")
 	private Long idBrand;
+	@Column(name = "BRAND_CODE", length = 8, unique = true, nullable = false)
+	@Size(min = 1, max = 8)
+	private String brandCode;
 	@Column(name = "BRAND_NAME", length = 25)
 	@Size(min = 1, max = 25)
 	private String brandName;

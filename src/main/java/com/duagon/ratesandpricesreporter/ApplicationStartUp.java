@@ -50,10 +50,10 @@ public class ApplicationStartUp implements ApplicationListener<ApplicationReadyE
 		log.info(RatesAndPricesConstants.SAVING_DEFAULT_DATA);
 
 		// Saving brands
-		Brands brand1 = brandsDao
-				.save(Brands.builder().brandName("ZARA").brandDescription("Textile products supplier").build());
+		Brands brand1 = brandsDao.save(Brands.builder().brandCode("1").brandName("ZARA")
+				.brandDescription("Textile products supplier").build());
 		Brands brand2 = brandsDao
-				.save(Brands.builder().brandName("IKEA").brandDescription("Forniture supplier").build());
+				.save(Brands.builder().brandCode("2").brandName("IKEA").brandDescription("Forniture supplier").build());
 
 		// Saving rates
 		Rates rate1 = ratesDao.save(Rates.builder().rateCode("1").build());
@@ -95,8 +95,8 @@ public class ApplicationStartUp implements ApplicationListener<ApplicationReadyE
 						.endDate(LocalDateTime.now()).build()))
 				.allMatch(price -> price.isPresent())) {
 
-			log.info(RatesAndPricesConstants.DEFAULT_DATA_SAVE_SUCCESS, pricesDao.findAllPrices().stream()
-					.map(price -> price.toString()).collect(Collectors.joining()));
+			log.info(RatesAndPricesConstants.DEFAULT_DATA_SAVE_SUCCESS,
+					pricesDao.findAllPrices().stream().map(price -> price.toString()).collect(Collectors.joining()));
 			log.info(RatesAndPricesConstants.RATES_AND_PRICES_REPORTER_READY);
 
 		} else {

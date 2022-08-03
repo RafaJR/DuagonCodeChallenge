@@ -29,7 +29,7 @@ public class Products {
 	private Long idProduct;
 	@Column(name = "PRODUCT_CODE_ID", unique = true, nullable = false)
 	private String productCodeId;
-	@Column(name = "PRODUCT_NAME", length = 25)
+	@Column(name = "PRODUCT_NAME", length = 25, unique = true, nullable = false)
 	@Size(min = 1, max = 25)
 	private String productName;
 	@Column(name = "PRODUCT_DESCRIPTION", length = 100)

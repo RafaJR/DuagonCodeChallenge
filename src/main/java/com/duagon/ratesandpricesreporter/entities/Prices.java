@@ -32,13 +32,13 @@ public class Prices {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	@Column(name = "ID_PRICE")
 	private Long idPrice;
-	@Column(name = "PRICE")
+	@Column(name = "PRICE", nullable = false)
 	private Double price;
-	@Column(name = "PRIORITY")
+	@Column(name = "PRIORITY", nullable = false)
 	private Integer priority;
-	@Column(name = "START_DATE")
+	@Column(name = "START_DATE", nullable = false)
 	private LocalDateTime startDate;
-	@Column(name = "END_DATE")
+	@Column(name = "END_DATE", nullable = false)
 	private LocalDateTime endDate;
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "FK_BRAND_ID", nullable = false)
