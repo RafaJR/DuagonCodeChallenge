@@ -20,7 +20,7 @@ public class InegerValueAsStringValidator implements ConstraintValidator<Integer
 
 		if (!isValid) {
 
-			log.error(RatesAndPricesConstants.INTEGER_CONSTRAINT, value);
+			log.error(RatesAndPricesConstants.INTEGER_CONSTRAINT_LOG, value);
 		}
 
 		return isValid;

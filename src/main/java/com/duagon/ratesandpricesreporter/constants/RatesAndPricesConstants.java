@@ -20,7 +20,10 @@ public class RatesAndPricesConstants {
 	// Data format constraints
 	public final static DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofPattern("yyyy-MM-dd-HH.mm.ss");
 	
-	// Input validtion messages
+	// Input validation messages
 	public final static String NOT_NULL_INPUT = "You must introduce the request parameters to obtain a price data.";
-	public final static String INTEGER_CONSTRAINT = "The input parameter introduced as '{}' must be introduced as an integer value.";
+	public final static String INTEGER_CONSTRAINT_HTTP_MESSAGE = "This parameter must be introduced as a integer value.";
+	public final static String INTEGER_CONSTRAINT_LOG = "The input parameter introduced as '{}' must be introduced as an integer value.";
+	public static final String DATE_CONSTRAINT_HTTP_MESSAGE = "The dates must be introduced with format 'yyyy-MM-dd-HH.mm.ss'";
+	public static final String DATE_CONSTRAINT_LOG = "The date introduced as '{}' must be introduced with format 'yyyy-MM-dd-HH.mm.ss'";
 }

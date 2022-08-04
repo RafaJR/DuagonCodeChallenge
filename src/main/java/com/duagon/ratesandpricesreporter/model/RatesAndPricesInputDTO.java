@@ -2,6 +2,7 @@ package com.duagon.ratesandpricesreporter.model;
 
 import javax.validation.constraints.NotNull;
 
+import com.duagon.ratesandpricesreporter.validation.DateConstraint;
 import com.duagon.ratesandpricesreporter.validation.IntegerValueAsStringConstraint;
 
 import lombok.AllArgsConstructor;
@@ -18,6 +19,7 @@ import lombok.ToString;
 public class RatesAndPricesInputDTO {
 
 	@NotNull
+	@DateConstraint
 	String aplicationDate;
 	@NotNull
 	@IntegerValueAsStringConstraint
