@@ -8,6 +8,10 @@ public class RatesAndPricesConstants {
 	public final static String CONTROLLER_GET_PRICES_AND_RATES_START = "Started request to get prices from parameters : \n\t{}\n###########";
 	public final static String INITAL_DATA_LOADING = "";
 	public final static String RATES_AND_PRICES_REPORTER_READY = "Rates and prices reporter is ready to work!";
+	public final static String NO_RESULT = "No prices found for input data:\n\t{}";
+	public final static String IO_EXCEPTION = "An error happened when trying to find the price:\n\t{}";
+	public final static String GENERAL_EXCEPTION = "An error happened when trying to find the price:\n\t{}";
+	public final static String RATES_AND_PRICES_SUCCESFULL_REQUEST = "Successfull request to obtain the prices with the imput data:\n\t{}\nObtaining the result:\n\t{}";
 	// Trace messages for dao
 	public final static String SAVE_PRICES_START = "A new price is going to be saved with these data:\n\t{}";
 	public final static String SAVE_PRICES_SUCCESS = "A new price has been saved with these data:\n\t{}";
@@ -16,6 +20,8 @@ public class RatesAndPricesConstants {
 	public final static String SAVING_DEFAULT_DATA = "Some data by default is going to be saved to start the application";
 	public final static String DEFAULT_DATA_SAVE_SUCCESS = "Default data has been sucessfully saved:\n\t{}";
 	public final static String DEFAULT_DATA_SAVE_FAILED = "An error happened when trying to save the application default data.";
+	// Trace messages for service
+	public final static String SERVICE_FIND_PRICES_START = "Started service to find prices from data:\n\t{}";
 	
 	// Data format constraints
 	public final static DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofPattern("yyyy-MM-dd-HH.mm.ss");
