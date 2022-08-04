@@ -1,7 +1,5 @@
 package com.duagon.ratesandpricesreporter.model;
 
-import javax.validation.constraints.NotNull;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,11 +13,11 @@ import lombok.ToString;
 @ToString
 public class RatesAndPricesOutputDTO {
 
-	@NotNull
-	String aplicationDate;
-	@NotNull
 	String productId;
-	@NotNull
 	String brandId;
+	String rate;
+	String applicationStartDate;
+	String applicationEndDate;
+	String price;
 
 }

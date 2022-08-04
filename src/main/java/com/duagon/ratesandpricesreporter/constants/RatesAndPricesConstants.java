@@ -19,4 +19,7 @@ public class RatesAndPricesConstants {
 	
 	// Data format constraints
 	public final static DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofPattern("yyyy-MM-dd-HH.mm.ss");
+	
+	// Input validtion messages
+	public final static String NOT_NULL_INPUT = "You must introduce the request parameters to obtain a price data.";
 }
