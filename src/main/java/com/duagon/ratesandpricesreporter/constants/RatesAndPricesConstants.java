@@ -22,4 +22,5 @@ public class RatesAndPricesConstants {
 	
 	// Input validtion messages
 	public final static String NOT_NULL_INPUT = "You must introduce the request parameters to obtain a price data.";
+	public final static String INTEGER_CONSTRAINT = "The input parameter introduced as '{}' must be introduced as an integer value.";
 }
