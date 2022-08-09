@@ -15,5 +15,5 @@ public interface IRatesAndPricesService {
 	 * @throws IOException
 	 * Find prices that matches with the input data: brand, product, applicationDate
 	 */
-	public Optional<List<RatesAndPricesOutputDTO>> findPrice(RatesAndPricesInputDTO ratesAndPricesInputDTO) throws IOException;
+	public Optional<List<RatesAndPricesOutputDTO>> findPrices(RatesAndPricesInputDTO ratesAndPricesInputDTO) throws IOException;
 }

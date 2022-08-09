@@ -41,7 +41,7 @@ public class RatesAndPricesController {
 
 		try {
 
-			optListRatesAndPricesOutputDTO = ratesAndPricesService.findPrice(ratesAndPricesInputDTO);
+			optListRatesAndPricesOutputDTO = ratesAndPricesService.findPrices(ratesAndPricesInputDTO);
 
 		} catch (IOException e) {
 			log.error(RatesAndPricesConstants.IO_EXCEPTION, e.getMessage());
@@ -54,16 +54,17 @@ public class RatesAndPricesController {
 		if (optListRatesAndPricesOutputDTO.isPresent()) {
 
 			List<RatesAndPricesOutputDTO> listRatesAndPricesOutputDTO = optListRatesAndPricesOutputDTO.get();
-
+			
 			log.info(RatesAndPricesConstants.RATES_AND_PRICES_SUCCESFULL_REQUEST, ratesAndPricesInputDTO,
 					listRatesAndPricesOutputDTO.stream().map(price -> price.toString()).collect(Collectors.joining()));
-			
+
 			return listRatesAndPricesOutputDTO.size() > 1 ? ResponseEntity.ok(listRatesAndPricesOutputDTO)
 					: ResponseEntity.ok(listRatesAndPricesOutputDTO.stream().findFirst().get());
 
 		} else {
 
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(RatesAndPricesConstants.NO_RESULT);
+			return ResponseEntity.status(HttpStatus.NOT_FOUND)
+					.body(String.format(RatesAndPricesConstants.NO_RESULT, ratesAndPricesInputDTO.toString()));
 		}
 
 	}
