@@ -37,4 +37,7 @@ public class RatesAndPricesConstants {
 	public static final String INTEGER_CONSTRAINT_LOG = "The input parameter introduced as '{}' must be introduced as an integer value.";
 	public static final String DATE_CONSTRAINT_HTTP_MESSAGE = "The dates must be introduced with format 'yyyy-MM-dd-HH.mm.ss'";
 	public static final String DATE_CONSTRAINT_LOG = "The date introduced as '{}' must be introduced with format 'yyyy-MM-dd-HH.mm.ss'";
+	public static final String DATES_CONSTRAINT_MESSAGE = "The start date must be before de end date";
+	public static final String DATES_CONSTRAINT_LOG = "The start date '{}' inserted is after the end date '[]' inserted.";
+	
 }
