@@ -23,6 +23,7 @@
 *.mvn/
 *.project
 *.settings/
+*.attach*
 target
 
 
