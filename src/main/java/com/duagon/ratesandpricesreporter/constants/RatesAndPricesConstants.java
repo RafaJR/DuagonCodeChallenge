@@ -18,6 +18,8 @@ public class RatesAndPricesConstants {
 	public static final String SAVE_PRICES_SUCCESS = "A new price has been saved with these data:\n\t{}";
 	public static final String SAVE_PRICES_FAILED = "An error happened when trying to save a price with these data:\n\t{}";
 	public static final String FIND_PRICES_START = "A database query to find prices is going to be thrown with these data:\n\t{}";
+	public static final String SERVICE_FIND_PRICES_SUCCESS = "Service to find prices successfully finished";
+	public static final String SERVICE_FIND_PRICES_NOT_FOUND = "Service to find prices successfully finished, but no data has been found.";
 	
 	// Trace messages for application start up
 	public static final String SAVING_DEFAULT_DATA = "Some data by default is going to be saved to start the application";

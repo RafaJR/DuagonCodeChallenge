@@ -25,18 +25,43 @@ public class PricesDao {
 	@Autowired
 	private IPricesDao iPricesDao;
 
+	/**
+	 * @param ratesAndPricesInputDTO
+	 * @return Optional<List<Prices>> Return an empty result if no match is found at
+	 *         DB query Find prices at DB by it's productCode, brand and date.
+	 */
 	public Optional<List<Prices>> findPrices(RatesAndPricesInputDTO ratesAndPricesInputDTO) {
 
 		log.info(RatesAndPricesConstants.FIND_PRICES_START, ratesAndPricesInputDTO);
 
-		return Optional.of(List.of(Prices.builder()
-				.startDate(LocalDateTime.parse("2020-06-14-00.00.00", RatesAndPricesConstants.DATE_FORMAT))
-				.endDate(LocalDateTime.parse("2020-12-31-23.59.59", RatesAndPricesConstants.DATE_FORMAT))
-				.fkBrandId(Brands.builder().brandCode("1").brandName("ZARA").brandDescription("Provider").build())
-				.fkCurrencyId(Currencies.builder().currencyISO("EUR").build())
-				.fkProductId(Products.builder().productCodeId("1").productName("Necktie")
-						.productDescription("Not for summer").build())
-				.fkRatesId(Rates.builder().rateCode("1").build()).price(100.50d).priority(1).build()));
+		LocalDateTime inputDate = LocalDateTime.parse(ratesAndPricesInputDTO.getAplicationDate(),
+				RatesAndPricesConstants.DATE_FORMAT);
+
+		Optional<List<Prices>> optPricesList = iPricesDao
+				.findPricesByFkProductId_ProductCodeIdAndFkBrandId_BrandCodeAndStartDateBeforeAndEndDateAfter(
+						ratesAndPricesInputDTO.getProductId(), ratesAndPricesInputDTO.getBrandId(), inputDate, inputDate);
+
+		if (optPricesList.isPresent() && !optPricesList.get().isEmpty()) {
+
+			log.info(RatesAndPricesConstants.SERVICE_FIND_PRICES_SUCCESS);
+
+			return optPricesList;
+
+		} else {
+
+			log.info(RatesAndPricesConstants.SERVICE_FIND_PRICES_NOT_FOUND);
+
+			return Optional.empty();
+		}
+
+//		return Optional.of(List.of(Prices.builder()
+//				.startDate(LocalDateTime.parse("2020-06-14-00.00.00", RatesAndPricesConstants.DATE_FORMAT))
+//				.endDate(LocalDateTime.parse("2020-12-31-23.59.59", RatesAndPricesConstants.DATE_FORMAT))
+//				.fkBrandId(Brands.builder().brandCode("1").brandName("ZARA").brandDescription("Provider").build())
+//				.fkCurrencyId(Currencies.builder().currencyISO("EUR").build())
+//				.fkProductId(Products.builder().productCodeId("1").productName("Necktie")
+//						.productDescription("Not for summer").build())
+//				.fkRatesId(Rates.builder().rateCode("1").build()).price(100.50d).priority(1).build()));
 	}
 
 	public Optional<Prices> savePrice(Prices price) {
