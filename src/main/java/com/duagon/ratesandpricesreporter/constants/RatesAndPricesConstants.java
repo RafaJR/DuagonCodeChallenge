@@ -18,8 +18,8 @@ public class RatesAndPricesConstants {
 	public static final String SAVE_PRICES_SUCCESS = "A new price has been saved with these data:\n\t{}";
 	public static final String SAVE_PRICES_FAILED = "An error happened when trying to save a price with these data:\n\t{}";
 	public static final String FIND_PRICES_START = "A database query to find prices is going to be thrown with these data:\n\t{}";
-	public static final String SERVICE_FIND_PRICES_SUCCESS = "Service to find prices successfully finished";
-	public static final String SERVICE_FIND_PRICES_NOT_FOUND = "Service to find prices successfully finished, but no data has been found.";
+	public static final String DAO_FIND_PRICES_SUCCESS = "Service to find prices successfully finished";
+	public static final String DAO_FIND_PRICES_NOT_FOUND = "Service to find prices successfully finished, but no data has been found.";
 	
 	// Trace messages for application start up
 	public static final String SAVING_DEFAULT_DATA = "Some data by default is going to be saved to start the application";
@@ -41,5 +41,9 @@ public class RatesAndPricesConstants {
 	public static final String DATE_CONSTRAINT_LOG = "The date introduced as '{}' must be introduced with format 'yyyy-MM-dd-HH.mm.ss'";
 	public static final String DATES_CONSTRAINT_MESSAGE = "The start date must be before de end date";
 	public static final String DATES_CONSTRAINT_LOG = "The start date '{}' inserted is after the end date '[]' inserted.";
+	
+	// Trace messages for Junit tests
+	public static final String MAIN_CONTROLLER_TEST_START = "Rates and Prices reporter main controller tests started.";
+	public static final String MAIN_CONTROLLER_TEST = "Main controller test '{}' started.";
 	
 }
