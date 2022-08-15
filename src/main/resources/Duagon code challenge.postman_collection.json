@@ -1,0 +1,415 @@
+{
+	"info": {
+		"_postman_id": "5a57a308-32dd-400e-ba6e-e26538348a89",
+		"name": "Duagon code challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8320203"
+	},
+	"item": [
+		{
+			"name": "Valid request - State 200 expected",
+			"item": [
+				{
+					"name": "find price - valid request 1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"aplicationDate\":\"2020-06-14-00.00.01\",\n    \"productId\":\"35455\",\n    \"brandId\":\"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/duagon/ratesandprices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"duagon",
+								"ratesandprices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find price - valid request 2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"aplicationDate\":\"2020-06-14-16.00.00\",\n    \"productId\":\"35455\",\n    \"brandId\":\"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/duagon/ratesandprices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"duagon",
+								"ratesandprices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find price - valid request 3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"aplicationDate\":\"2020-06-14-21.00.00\",\n    \"productId\":\"35455\",\n    \"brandId\":\"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/duagon/ratesandprices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"duagon",
+								"ratesandprices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find price - valid request 4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"aplicationDate\":\"2020-06-15-10.00.00\",\n    \"productId\":\"35455\",\n    \"brandId\":\"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/duagon/ratesandprices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"duagon",
+								"ratesandprices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find price - valid request 5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"aplicationDate\":\"2020-06-16-21.00.00\",\n    \"productId\":\"35455\",\n    \"brandId\":\"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/duagon/ratesandprices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"duagon",
+								"ratesandprices"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Not valid request - State 400 expected",
+			"item": [
+				{
+					"name": "find price - null brand",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"aplicationDate\":\"2020-06-14-00.00.00\",\n    \"productId\":\"35455\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/duagon/ratesandprices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"duagon",
+								"ratesandprices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find price - null date",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"aplicationDate\":\"2020-06-14-00.00.00\",\n    \"productId\":\"35455\",\n    \"brandId\":\"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/duagon/ratesandprices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"duagon",
+								"ratesandprices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find price - null product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"aplicationDate\":\"2020-06-14-00.00.00\",\n    \n    \"brandId\":\"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/duagon/ratesandprices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"duagon",
+								"ratesandprices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find price - Not valid brand",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"aplicationDate\":\"2020-06-14-00.00.00\",\n    \"productId\":\"35455\",\n    \"brandId\":\"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/duagon/ratesandprices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"duagon",
+								"ratesandprices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find price - not vaid product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"aplicationDate\":\"2020-06-14-00.00.00\",\n    \"productId\":\"a\",\n    \"brandId\":\"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/duagon/ratesandprices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"duagon",
+								"ratesandprices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find price - not Valid Date",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"aplicationDate\":\"2020-06-14-00.00.0\",\n    \"productId\":\"35455\",\n    \"brandId\":\"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/duagon/ratesandprices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"duagon",
+								"ratesandprices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find price - null body",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/duagon/ratesandprices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"duagon",
+								"ratesandprices"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
